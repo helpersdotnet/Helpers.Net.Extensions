@@ -64,6 +64,18 @@ namespace TestProject
         #endregion
 
         /// <summary>
+        ///A test for ToInt
+        ///</summary>
+        [TestMethod()]
+        public void ToIntTest()
+        {
+            string s = "1";
+            int expected = 1;
+            int actual = s.ToInt();
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
         ///A test for ToDouble
         ///</summary>
         [TestMethod()]
