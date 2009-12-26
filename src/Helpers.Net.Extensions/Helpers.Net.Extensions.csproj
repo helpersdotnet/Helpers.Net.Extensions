@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="char.cs" />
     <Compile Include="Color\Color.cs" />
+    <Compile Include="int.cs" />
     <Compile Include="string.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
