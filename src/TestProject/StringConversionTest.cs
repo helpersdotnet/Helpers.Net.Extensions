@@ -63,6 +63,17 @@ namespace TestProject
         //
         #endregion
 
+        /// <summary>
+        ///A test for ToDouble
+        ///</summary>
+        [TestMethod()]
+        public void ToDoubleTest()
+        {
+            string s = "1.0";
+            double expected = 1.0;
+            double actual = s.ToDouble();
+            Assert.AreEqual(expected, actual);
+        }
 
         /// <summary>
         ///A test for ToDecimal
