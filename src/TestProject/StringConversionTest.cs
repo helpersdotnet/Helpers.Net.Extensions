@@ -64,6 +64,18 @@ namespace TestProject
         #endregion
 
         /// <summary>
+        ///A test for ToFloat
+        ///</summary>
+        [TestMethod()]
+        public void ToFloatTest()
+        {
+            string s = "1.0";
+            float expected = 1;
+            float actual = s.ToFloat();
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
         ///A test for ToInt
         ///</summary>
         [TestMethod()]

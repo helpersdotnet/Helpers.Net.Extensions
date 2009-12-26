@@ -5,7 +5,17 @@ namespace Helpers.Net.Extensions
     public static partial class Extensions
     {
         /// <summary>
-        /// Converts the string representation of a number to <see cref="System.System.Int32"/> equivalent.
+        /// Converts the string representation of a number to <see cref="System.Single"/> equivalent.
+        /// </summary>
+        /// <param name="s">String representation of the number to convert.</param>
+        /// <returns></returns>
+        public static float ToFloat(this string str)
+        {
+            return float.Parse(str);
+        }
+
+        /// <summary>
+        /// Converts the string representation of a number to <see cref="System.Int32"/> equivalent.
         /// </summary>
         /// <param name="s">String representation of the number to convert.</param>
         /// <returns></returns>
