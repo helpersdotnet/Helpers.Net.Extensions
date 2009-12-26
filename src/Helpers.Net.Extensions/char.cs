@@ -29,6 +29,11 @@ namespace Helpers.Net.Extensions
             }
         }
 
+        /// <summary>
+        /// Checks whether the character is a consonant or not.
+        /// </summary>
+        /// <param name="c">The character to check.</param>
+        /// <returns>Returns true if the character is consonant.</returns>
         public static bool IsConsonant(this char c)
         {
             return !c.IsVowel();
