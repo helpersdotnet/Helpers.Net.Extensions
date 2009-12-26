@@ -28,5 +28,10 @@ namespace Helpers.Net.Extensions
                     return false;
             }
         }
+
+        public static bool IsConsonant(this char c)
+        {
+            return !c.IsVowel();
+        }
     }
 }

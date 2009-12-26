@@ -14,6 +14,10 @@ namespace TestProject
     public class CharTest
     {
 
+        private char[] consonants = new char[] { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'x', 'y', 'z' };
+        private char[] consonantsCaps = new char[] { 'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z' };
+        private char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
+        private char[] vowelsCaps = new char[] { 'A', 'E', 'I', 'O', 'U' };
 
         private TestContext testContextInstance;
 
@@ -70,13 +74,12 @@ namespace TestProject
         [TestMethod()]
         public void IsVowelTest()
         {
-            char[] c = new char[] { 'a', 'e', 'i', 'o', 'u' }; // TODO: Initialize to an appropriate value
-            bool expected = true; // TODO: Initialize to an appropriate value
+            bool expected = true;
             bool actual;
 
-            foreach (char item in c)
+            foreach (char item in vowels)
             {
-                actual = Extensions.IsVowel(item);
+                actual = item.IsVowel();
                 Assert.AreEqual(expected, actual);
             }
         }
@@ -87,13 +90,12 @@ namespace TestProject
         [TestMethod()]
         public void IsVowelTestCaps()
         {
-            char[] c = new char[] { 'A', 'E', 'I', 'O', 'U' }; // TODO: Initialize to an appropriate value
-            bool expected = true; // TODO: Initialize to an appropriate value
+            bool expected = true;
             bool actual;
 
-            foreach (char item in c)
+            foreach (char item in vowelsCaps)
             {
-                actual = Extensions.IsVowel(item);
+                actual = item.IsVowel();
                 Assert.AreEqual(expected, actual);
             }
         }
@@ -104,13 +106,13 @@ namespace TestProject
         [TestMethod()]
         public void IsVowelTestNo()
         {
-            char[] c = new char[] { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'x', 'y', 'z' }; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
+            
+            bool expected = false;
             bool actual;
 
-            foreach (char item in c)
+            foreach (char item in consonants)
             {
-                actual = Extensions.IsVowel(item);
+                actual = item.IsVowel();
                 Assert.AreEqual(expected, actual);
             }
         }
@@ -121,13 +123,78 @@ namespace TestProject
         [TestMethod()]
         public void IsVowelTestCapsNo()
         {
-            char[] c = new char[] { 'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z' }; // TODO: Initialize to an appropriate value
-            bool expected = false; // TODO: Initialize to an appropriate value
+            bool expected = false;
             bool actual;
 
-            foreach (char item in c)
+            foreach (char item in consonantsCaps)
             {
-                actual = Extensions.IsVowel(item);
+                actual = item.IsVowel();
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        /// <summary>
+        ///A test for IsConsonant
+        ///</summary>
+        [TestMethod()]
+        public void IsConsonantTest()
+        {
+
+            bool expected = true;
+            bool actual;
+
+            foreach (char item in consonants)
+            {
+                actual = item.IsConsonant();
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        /// <summary>
+        ///A test for IsConsonant
+        ///</summary>
+        [TestMethod()]
+        public void IsConsonantTestCaps()
+        {
+            bool expected = true;
+            bool actual;
+
+            foreach (char item in consonants)
+            {
+                actual = item.IsConsonant();
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        /// <summary>
+        ///A test for IsConsonant
+        ///</summary>
+        [TestMethod()]
+        public void IsConsonantTestNo()
+        {
+
+            bool expected = false;
+            bool actual;
+
+            foreach (char item in vowels)
+            {
+                actual = item.IsConsonant();
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        /// <summary>
+        ///A test for IsConsonant
+        ///</summary>
+        [TestMethod()]
+        public void IsConsonantTestCapsNo()
+        {
+            bool expected = false;
+            bool actual;
+
+            foreach (char item in vowelsCaps)
+            {
+                actual = item.IsConsonant();
                 Assert.AreEqual(expected, actual);
             }
         }
