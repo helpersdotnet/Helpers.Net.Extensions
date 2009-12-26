@@ -13,5 +13,15 @@ namespace Helpers.Net.Extensions
         {
             return decimal.Parse(s);
         }
+
+        /// <summary>
+        /// Converts the string representation of a character to <see cref="System.Char"/> equivalent.
+        /// </summary>
+        /// <param name="s">String representation of the character to convert.</param>
+        /// <returns></returns>
+        public static char ToChar(this string s)
+        {
+            return char.Parse(s);
+        }
     }
 }

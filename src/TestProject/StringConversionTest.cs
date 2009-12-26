@@ -70,9 +70,21 @@ namespace TestProject
         [TestMethod()]
         public void ToDecimalTest()
         {
-            string s = "1.0"; // TODO: Initialize to an appropriate value
+            string s = "1.0";
             decimal expected = 1.0M;
             decimal actual = s.ToDecimal();
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for ToChar
+        ///</summary>
+        [TestMethod()]
+        public void ToCharTest()
+        {
+            string s = "a";
+            char expected = 'a';
+            decimal actual = s.ToChar();
             Assert.AreEqual(expected, actual);
         }
     }
