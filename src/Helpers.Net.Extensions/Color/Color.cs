@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Helpers.Net.Extensions
 {
-    public static class Extensions
+    public static partial class Extensions
     {
         /// <summary>
         /// Converts a color object into a hex color value
