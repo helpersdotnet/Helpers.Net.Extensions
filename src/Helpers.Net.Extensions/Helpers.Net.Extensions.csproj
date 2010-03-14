@@ -41,6 +41,7 @@
     <Compile Include="char.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="int.cs" />
+    <Compile Include="Serialization\Serialization.cs" />
     <Compile Include="Sorting\SortOrder.cs" />
     <Compile Include="string.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
