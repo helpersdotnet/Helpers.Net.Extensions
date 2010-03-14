@@ -13,26 +13,26 @@ namespace Helpers.Net.Extensions
         /// <returns>a hex value</returns>
         public static string ToHexString(this Color color)
         {
-            string HexR = null;
-            string HexB = null;
-            string HexG = null;
+            string hexR;
+            string hexB;
+            string hexG;
 
             try
             {
                 //Get Red Hex
-                HexR = Convert.ToString(color.R, 16).ToUpper();
-                if (HexR.Length < 2)
-                    HexR = "0" + HexR;
+                hexR = Convert.ToString(color.R, 16).ToUpper();
+                if (hexR.Length < 2)
+                    hexR = "0" + hexR;
 
                 //Get Green Hex
-                HexG = Convert.ToString(color.G, 16).ToUpper();
-                if (HexG.Length < 2)
-                    HexG = "0" + HexG;
+                hexG = Convert.ToString(color.G, 16).ToUpper();
+                if (hexG.Length < 2)
+                    hexG = "0" + hexG;
 
                 //Get Blue Hex
-                HexB = Convert.ToString(color.B, 16).ToUpper();
-                if (HexB.Length < 2)
-                    HexB = "0" + HexB;
+                hexB = Convert.ToString(color.B, 16).ToUpper();
+                if (hexB.Length < 2)
+                    hexB = "0" + hexB;
 
             }
             catch
@@ -40,7 +40,7 @@ namespace Helpers.Net.Extensions
                 return "";
             }
 
-            return "#" + HexR + HexG + HexB;
+            return "#" + hexR + hexG + hexB;
         }
     }
 }
