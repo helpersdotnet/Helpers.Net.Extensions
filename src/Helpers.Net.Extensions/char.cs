@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Helpers.Net.Extensions
 {
     public static partial class Extensions
