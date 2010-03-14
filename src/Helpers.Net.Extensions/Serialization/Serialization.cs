@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace Helpers.Net.Extensions
 {
@@ -44,6 +46,18 @@ namespace Helpers.Net.Extensions
             }
             return graph;
         }
+
+        /// <summary>
+        /// Checks if object is serializable
+        /// </summary>
+        /// <typeparam name="T">Type of object to check</typeparam>
+        /// <param name="obj">Object to check</param>
+        /// <returns>Returns true if serializable, otherwise false</returns>
+        public static bool IsSerializable<T>(T obj)
+        {
+            return obj is ISerializable ||
+                   (Attribute.IsDefined(typeof(T), typeof(SerializableAttribute)));
+        }
     }
 
     public static partial class Extensions
@@ -66,6 +80,17 @@ namespace Helpers.Net.Extensions
         public static object Deserialize(this byte[] serializedData)
         {
             return Serialization.Deserialize(serializedData);
+        }
+
+        /// <summary>
+        /// Checks if object is serializable
+        /// </summary>
+        /// <typeparam name="T">Type of object</typeparam>
+        /// <param name="obj">Object to check for serialization</param>
+        /// <returns>Returns true if object is serializable</returns>
+        public static bool IsSerializable<T>(this T obj)
+        {
+            return Serialization.IsSerializable(obj);
         }
     }
 }
