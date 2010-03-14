@@ -39,8 +39,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="char.cs" />
-    <Compile Include="Color\Color.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="int.cs" />
+    <Compile Include="Sorting\SortOrder.cs" />
     <Compile Include="string.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
