@@ -38,7 +38,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteArray.cs" />
     <Compile Include="char.cs" />
+    <Compile Include="Collections\ICollection.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="int.cs" />
     <Compile Include="Serialization\Serialization.cs" />

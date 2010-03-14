@@ -13,7 +13,7 @@ namespace Helpers.Net.Extensions
         /// <param name="graph">Object to serialize.</param>
         /// <returns>Returns the serialized object.</returns>
         public static byte[] Serialize(object graph)
-        {
+        {// todo: test
             byte[] serializedData;
             using (var ms = new MemoryStream())
             {
@@ -30,7 +30,7 @@ namespace Helpers.Net.Extensions
         /// <param name="serializedData">Serialzied Data</param>
         /// <returns>Deserialized object</returns>
         public static object Deserialize(byte[] serializedData)
-        {
+        {// todo: test
             object graph = null;
             if (serializedData != null)
             {
@@ -54,7 +54,7 @@ namespace Helpers.Net.Extensions
         /// <param name="obj">Object to check</param>
         /// <returns>Returns true if serializable, otherwise false</returns>
         public static bool IsSerializable<T>(T obj)
-        {
+        {// todo: test
             return obj is ISerializable ||
                    (Attribute.IsDefined(typeof(T), typeof(SerializableAttribute)));
         }
