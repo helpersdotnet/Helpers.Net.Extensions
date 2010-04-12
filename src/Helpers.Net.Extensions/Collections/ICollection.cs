@@ -5,7 +5,7 @@ namespace Helpers.Net.Extensions
 {
     public static partial class Extensions
     {
-        /// <summary>
+        /// <summary>hellow
         /// Indicates wheter the specified <see cref="System.Collections.ICollection"/>
         /// is null or empty.
         /// </summary>

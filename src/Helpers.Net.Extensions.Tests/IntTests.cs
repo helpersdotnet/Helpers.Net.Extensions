@@ -31,7 +31,6 @@ namespace Helpers.Net.Extensions.Tests
 
         #endregion
 
-
         #region Tests
 
         [Theory]

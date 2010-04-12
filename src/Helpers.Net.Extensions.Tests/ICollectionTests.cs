@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Xunit;
 using Xunit.Extensions;
@@ -42,10 +41,7 @@ namespace Helpers.Net.Extensions.Tests
 
         public static IEnumerable<object[]> EmptyICollection
         {
-            get
-            {
-                yield return new object[] { new List<string>() };
-            }
+            get { yield return new object[] {new List<string>()}; }
         }
 
         public static IEnumerable<object[]> NullICollection
@@ -53,7 +49,7 @@ namespace Helpers.Net.Extensions.Tests
             get
             {
                 List<string> list = null;
-                yield return new object[] { list };
+                yield return new object[] {list};
             }
         }
 
@@ -61,17 +57,14 @@ namespace Helpers.Net.Extensions.Tests
         {
             get
             {
-                yield return new object[] { new List<string> { "A" } };
-                yield return new object[] { new List<string> { "A", "B" } };
+                yield return new object[] {new List<string> {"A"}};
+                yield return new object[] {new List<string> {"A", "B"}};
             }
         }
 
         public static IEnumerable<object[]> EmptyICollectionT
         {
-            get
-            {
-                yield return new object[] { new List<string>() };
-            }
+            get { yield return new object[] {new List<string>()}; }
         }
 
         public static IEnumerable<object[]> NullICollectionT
@@ -79,7 +72,7 @@ namespace Helpers.Net.Extensions.Tests
             get
             {
                 List<string> list = null;
-                yield return new object[] { list };
+                yield return new object[] {list};
             }
         }
 
@@ -87,12 +80,11 @@ namespace Helpers.Net.Extensions.Tests
         {
             get
             {
-                yield return new object[] { new List<string> { "A" } };
-                yield return new object[] { new List<string> { "A", "B" } };
+                yield return new object[] {new List<string> {"A"}};
+                yield return new object[] {new List<string> {"A", "B"}};
             }
         }
 
         #endregion
-
     }
 }
